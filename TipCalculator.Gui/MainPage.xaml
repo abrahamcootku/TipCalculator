@@ -13,53 +13,101 @@
             <Border
                Grid.Row="0">
                 <VerticalStackLayout
-                    Spacing="10">
-
+                     Spacing="10">
                     <VerticalStackLayout>
                         <Label
-                     Text="Importe del consumo"
-                    FontSize="Small"
-                     Margin="10"/>
+                        Text="Importe del consumo"
+                        FontSize="Small"
+                        Margin="10"/>
                         <Entry
-                    x:Name="ImporteEntry"
-                    FontSize="Small"/>
+                         x:Name="ImporteEntry"
+                         FontSize="Small"/>
                     </VerticalStackLayout>
 
                     <VerticalStackLayout>
                         <Label
-                    Text="% Persona"
-                    FontSize="Small"
-                            Margin="10"/>
-                        <Entry
+                           Text="% Persona"
+                           FontSize="Small"
+                           Margin="10"/>
+                     <Entry
                      x:Name="PersonaEntry"
                      FontSize="Small"/>
                     </VerticalStackLayout>
 
                     <VerticalStackLayout>
                         <Label
-                        Text="% de propina "
-                        FontSize="Small"
-                            Margin="10"/>
+                           Text="% de propina "
+                           FontSize="Small"
+                           Margin="10"/>
                         <Entry
-                        x:Name="PropinaEntry"
-                        FontSize="Small"/>
+                          x:Name="PropinaEntry"
+                          FontSize="Small"/>
                     </VerticalStackLayout>
                 </VerticalStackLayout>
             </Border>
             <HorizontalStackLayout
                     Grid.Row="1"
                     HorizontalOptions="Center"
-                    Spacing="10"
+                    Spacing="30"
                     Margin="0,15,0,0">
                 <Button
                         Text="Calcular"
                         FontSize="Small"
-                       />
+                        Clicked="CalcularButton_Clicked"/>
                 <Button
                         Text="Limpiar"
-                        FontSize="Small"/>
+                        FontSize="Small"
+                        Clicked="LimpiarButton_Clicked"/>
             </HorizontalStackLayout>
-
+            <Border
+              Grid.Row="2"
+              Stroke="LightGray"
+              Padding="10"
+              Margin="15">
+                <VerticalStackLayout
+                       Spacing="5">
+                    <Label
+                         Text="Importe de la propina:"
+                         FontSize="Small"
+                         HorizontalOptions="Start"/>
+                    <Label
+                         x:Name="ImportepropinaLabel"
+                         FontSize="Small"
+                         Text="$131.25"
+                         FontAttributes="Bold"
+                         HorizontalOptions="End"/>
+                    <Label
+                          Text="Porpina por persona:"
+                          FontSize="Small" 
+                          HorizontalOptions="Start"/>
+                    <Label
+                          x:Name="PropinapersonaLabel"
+                          FontSize="Small"
+                          Text="$43.75"
+                          FontAttributes="Bold"
+                          HorizontalOptions="End"/>
+                    <Label
+                          Text="Importe total:"
+                          FontSize="Small"
+                          HorizontalOptions="Start"/>
+                    <Label
+                          x:Name="ImportetotalLabel"
+                          FontSize="Small"
+                          Text="$1,006.25"
+                          FontAttributes="Bold"
+                          HorizontalOptions="End"/>
+                    <Label
+                          Text="Importe total por persona:"
+                          FontSize="Small"
+                          HorizontalOptions="Start"/>
+                    <Label
+                          x:Name="ImportetotalpersonaLabel"
+                          FontSize="Small"
+                          Text="$335.42"
+                          FontAttributes="Bold"
+                          HorizontalOptions="End"/>
+                </VerticalStackLayout>
+            </Border>
         </Grid>
     </ScrollView>
 
