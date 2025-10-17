@@ -5,9 +5,62 @@
              Title="Calculadora De Propinas">
 
     <ScrollView>
-        <VerticalStackLayout>
-          
-        </VerticalStackLayout>
+        <Grid 
+           RowDefinitions="Auto, Auto, Auto, Auto"
+           ColumnDefinitions="*"
+           RowSpacing="20"
+           Padding="20">
+            <Border
+               Grid.Row="0">
+                <VerticalStackLayout
+                    Spacing="10">
+
+                    <VerticalStackLayout>
+                        <Label
+                     Text="Importe del consumo"
+                    FontSize="Small"
+                     Margin="10"/>
+                        <Entry
+                    x:Name="ImporteEntry"
+                    FontSize="Small"/>
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout>
+                        <Label
+                    Text="% Persona"
+                    FontSize="Small"
+                            Margin="10"/>
+                        <Entry
+                     x:Name="PersonaEntry"
+                     FontSize="Small"/>
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout>
+                        <Label
+                        Text="% de propina "
+                        FontSize="Small"
+                            Margin="10"/>
+                        <Entry
+                        x:Name="PropinaEntry"
+                        FontSize="Small"/>
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+            <HorizontalStackLayout
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Spacing="10"
+                    Margin="0,15,0,0">
+                <Button
+                        Text="Calcular"
+                        FontSize="Small"
+                       />
+                <Button
+                        Text="Limpiar"
+                        FontSize="Small"/>
+            </HorizontalStackLayout>
+
+        </Grid>
     </ScrollView>
 
 </ContentPage>
